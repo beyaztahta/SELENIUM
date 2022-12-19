@@ -7,9 +7,10 @@ public class NavigateMethods {
     public static void main(String[] args) {
         /*
         Sayfalar arası gecis varsa mutlaka kullanılmalı "navigate to".implicitlyWait() metodunu biz en basta kullaniriz.
-        Cunku herhangi bir internet yavasligi vs. durumunda bazen daha site tam acilmadan bizim asagida yazdigimiz diger testler FAIL olur.
-         Bunun onune gecmek icin (sitenin tum HTML elementleri tam yuklenmeden teste baslamasin diye) en basa bunu koyariz.
-        sleep() ise bizim yazdigimiz test kodlari arasinda bekleme yapsin diye yazdigimiz bir kod.
+        Cunku herhangi bir internet yavasligi vs. durumunda bazen daha site tam acilmadan bizim asagida yazdigimiz diger
+        testler FAIL olur. Bunun onune gecmek icin (sitenin tum HTML elementleri tam yuklenmeden teste baslamasin diye)
+        en basa bunu koyariz.
+       ==> sleep() ise bizim yazdigimiz test kodlari arasinda bekleme yapsin diye yazdigimiz bir kod.
          */
 
         System.setProperty("webdriver.chrome.driver","src/resources/chromedrivers/chromedriver.exe");
