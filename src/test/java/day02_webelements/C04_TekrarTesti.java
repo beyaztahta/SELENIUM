@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C03_WebElemetsLocatorsGetMethodları {
+public class C04_TekrarTesti {
     static WebDriver driver;
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","src/resources/chromedrivers/chromedriver.exe");
@@ -16,21 +16,17 @@ public class C03_WebElemetsLocatorsGetMethodları {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        //Amazon sayfasına gidelim.
-        driver.get("https://amazon.com");
+        //a.web sayfasına gidin. https://www.amazon.com/
+        driver.get("https://www.amazon.com");
 
-        //Search bolumunu locate edip iphone aratalım.
-         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
+        //Search(ara) “city bike”
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("city bike", Keys.ENTER);
 
-        //Arama sonuc yazısında iphone yazısının locate edip konsola yazdıralım.
+        //Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
         WebElement aramaSonucYazısı=driver.findElement(By.className("sg-col-inner"));
         System.out.println(aramaSonucYazısı.getText());
 
-
-        //Sayfayı kapatalım.
-         driver.close();
-
-
-
+        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
     }
+
 }
