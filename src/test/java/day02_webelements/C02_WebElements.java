@@ -44,9 +44,5 @@ public class C02_WebElements {
             System.out.println(w.getText());
         }
 
-
-
-
-
     }
 }
